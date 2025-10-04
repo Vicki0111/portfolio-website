@@ -3,10 +3,12 @@ import './App.css'
 
 export default function App() {
   const name = 'Vignesh M'
-  const tagline = 'College Student'
+  const tagline = 'College Student at SRMIST KTR'
   const email = 'vicvignesh0111@gmail.com'
   const phone = '+91 6379278253'
   const phoneTel = '+916379278253'
+  // Ensure correct path in both local dev and GitHub Pages builds
+  const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`
 
   const socials = [
     { href: 'https://github.com/Vicki0111', label: 'GitHub', icon: <FaGithub /> },
@@ -20,6 +22,7 @@ export default function App() {
         <a className="brand" href="#top">{name}</a>
         <nav className="nav">
           <a href="#about">About</a>
+          <a href={resumeUrl} download target="_blank" rel="noreferrer">Resume</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -40,14 +43,15 @@ export default function App() {
           </div>
           <div className="cta">
             <a className="btn primary" href="#contact">Get in touch</a>
+            <a className="btn" href={resumeUrl} download target="_blank" rel="noreferrer">Download Resume</a>
           </div>
         </section>
 
         <section id="about" className="section">
           <h2>About</h2>
           <p>
-            I’m a developer passionate about building minimal, performant, and accessible web apps.
-            This simple portfolio is built with React and Vite.
+            Hey! I am college student who is passionate about computers and intend to dedicate myself in learning more and gaining knowledge.
+            This simple portfolio provides a self intoduction to me and is built with React and Vite.
           </p>
         </section>
 
