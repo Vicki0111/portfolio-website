@@ -1,0 +1,43 @@
+.shell{ max-width: 960px; margin: 0 auto; padding: 24px; }
+
+.header{
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; padding: 16px 0; backdrop-filter: blur(6px);
+}
+
+.brand{
+  font-weight: 700; color: var(--text); text-decoration: none; letter-spacing: 0.2px;
+}
+
+.nav{ display: flex; gap: 12px; align-items: center; }
+.nav a{ color: var(--text); text-decoration: none; padding: 8px 10px; border-radius: 8px; }
+.nav a:hover{ background: var(--panel); }
+
+.btn{
+  background: transparent; border: 1px solid var(--muted); color: var(--text);
+  padding: 8px 12px; border-radius: 10px; text-decoration: none; display: inline-flex; gap: 8px; align-items: center;
+}
+.btn.primary{ border-color: var(--brand); background: linear-gradient(180deg, var(--brand), #457cf5); color: white; }
+.btn:focus-visible{ box-shadow: 0 0 0 4px var(--ring); }
+
+.main{ display: grid; gap: 56px; }
+
+.hero{ padding: 48px 0 0; text-align: center; }
+.hero h1{ font-size: clamp(28px, 6vw, 48px); margin: 0 0 8px; }
+.tagline{ color: var(--muted); margin: 0 0 16px; font-weight: 600; }
+
+.socials{ display: flex; justify-content: center; gap: 16px; margin: 12px 0 20px; }
+.socials a{ width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%;
+  background: var(--panel); color: var(--text); border: 1px solid #00000033;
+}
+.socials a:hover{ transform: translateY(-2px); box-shadow: 0 6px 18px #00000033; }
+.socials svg{ width: 20px; height: 20px; }
+
+.cta{ display: flex; justify-content: center; gap: 12px; }
+
+.section{ background: linear-gradient(180deg, #ffffff05, #00000000); border: 1px solid #ffffff0f; border-radius: 16px; padding: 24px; }
+.section h2{ margin: 0 0 8px; font-size: 20px; }
+.section p{ margin: 0 0 12px; color: var(--muted); }
+
+.footer{ text-align: center; color: var(--muted); padding: 32px 0; }
