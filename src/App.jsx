@@ -27,7 +27,7 @@ export default function App() {
       <main id="top" className="main">
         <section className="hero">
           <div className="avatar">
-            <img src="/avatar.svg" alt={`${name} portrait`} />
+<img src="/image.jpg" alt={`${name} portrait`} />
           </div>
           <h1>{name}</h1>
           <p className="tagline">{tagline}</p>
