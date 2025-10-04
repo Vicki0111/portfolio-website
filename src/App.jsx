@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { FaGithub, FaLinkedin, FaInstagram, FaMoon, FaSun } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaInstagram, FaMoon, FaSun, FaGlobe } from 'react-icons/fa'
 import './App.css'
 
 export default function App() {
@@ -39,6 +39,7 @@ export default function App() {
     { href: 'https://github.com/Vicki0111', label: 'GitHub', icon: <FaGithub /> },
     { href: 'https://www.linkedin.com/in/vignesh-m-a65a75381/', label: 'LinkedIn', icon: <FaLinkedin /> },
     { href: 'https://www.instagram.com/_.wicckee._', label: 'Instagram', icon: <FaInstagram /> },
+    { href: 'https://averagecinema.blogspot.com/', label: 'Blog', icon: <FaGlobe /> },
   ]
 
   return (
