@@ -1,4 +1,5 @@
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
+import { useEffect, useState } from 'react'
+import { FaGithub, FaLinkedin, FaInstagram, FaMoon, FaSun } from 'react-icons/fa'
 import './App.css'
 
 export default function App() {
@@ -9,6 +10,30 @@ export default function App() {
   const phoneTel = '+916379278253'
   // Ensure correct path in both local dev and GitHub Pages builds
   const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`
+
+  // Theme state: initialize from localStorage or system preference
+  const [theme, setTheme] = useState('dark')
+  useEffect(() => {
+    try{
+      const stored = localStorage.getItem('theme')
+      if (stored === 'light' || stored === 'dark'){
+        setTheme(stored)
+        document.documentElement.setAttribute('data-theme', stored)
+        return
+      }
+    }catch{}
+    const prefersLight = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches
+    const initial = prefersLight ? 'light' : 'dark'
+    setTheme(initial)
+    document.documentElement.setAttribute('data-theme', initial)
+  }, [])
+
+  const toggleTheme = () => {
+    const next = theme === 'dark' ? 'light' : 'dark'
+    setTheme(next)
+    try{ localStorage.setItem('theme', next) }catch{}
+    document.documentElement.setAttribute('data-theme', next)
+  }
 
   const socials = [
     { href: 'https://github.com/Vicki0111', label: 'GitHub', icon: <FaGithub /> },
@@ -24,6 +49,10 @@ export default function App() {
           <a href="#about">About</a>
           <a href={resumeUrl} download target="_blank" rel="noreferrer">Resume</a>
           <a href="#contact">Contact</a>
+          <button className="theme-toggle" onClick={toggleTheme} aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}>
+            {theme === 'dark' ? <FaSun /> : <FaMoon />}
+            <span className="sr-only">Toggle theme</span>
+          </button>
         </nav>
       </header>
 

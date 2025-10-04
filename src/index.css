@@ -18,6 +18,38 @@
   }
 }
 
+/* Explicit theme overrides (take precedence over system preference) */
+:root[data-theme="dark"]{
+  --bg: #0b0b0c;
+  --panel: #121214;
+  --text: #e7e7e9;
+  --muted: #b5b7bd;
+  --brand: #6ea8fe;
+  --ring: #6ea8fe33;
+}
+
+:root[data-theme="light"]{
+  --bg: #ffffff;
+  --panel: #f4f6f8;
+  --text: #151718;
+  --muted: #3b3f45;
+  --brand: #3b82f6;
+  --ring: #3b82f622;
+}
+
+/* Screen-reader only utility */
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 * { box-sizing: border-box; }
 html, body, #root { height: 100%; }
 
