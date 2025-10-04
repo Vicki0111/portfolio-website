@@ -4,7 +4,7 @@ import './App.css'
 
 export default function App() {
   const name = 'Vignesh M'
-  const tagline = 'College Student at SRMIST KTR'
+  const tagline = 'Student at SRMIST KTR'
   const email = 'vicvignesh0111@gmail.com'
   const phone = '+91 6379278253'
   const phoneTel = '+916379278253'
