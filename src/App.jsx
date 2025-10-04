@@ -81,7 +81,7 @@ export default function App() {
           <h2>About</h2>
           <p>
             Hey! I am college student who is passionate about computers and intend to dedicate myself in learning more and gaining knowledge.
-            This simple portfolio provides a self intoduction to me and is built with React and Vite.
+            This simple portfolio website provides a self intoduction to me and is built with React.
           </p>
         </section>
 
