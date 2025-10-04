@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
 import './App.css'
 
 export default function App() {
@@ -11,6 +11,7 @@ export default function App() {
   const socials = [
     { href: 'https://github.com/Vicki0111', label: 'GitHub', icon: <FaGithub /> },
     { href: 'https://www.linkedin.com/in/vignesh-m-a65a75381/', label: 'LinkedIn', icon: <FaLinkedin /> },
+    { href: 'https://www.instagram.com/_.wicckee._', label: 'Instagram', icon: <FaInstagram /> },
   ]
 
   return (
@@ -20,7 +21,6 @@ export default function App() {
         <nav className="nav">
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
-          <a className="btn" href="/resume.pdf" download>Download Resume</a>
         </nav>
       </header>
 
@@ -40,7 +40,6 @@ export default function App() {
           </div>
           <div className="cta">
             <a className="btn primary" href="#contact">Get in touch</a>
-            <a className="btn" href="/resume.pdf" download>Resume</a>
           </div>
         </section>
 
