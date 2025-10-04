@@ -31,7 +31,7 @@ A modern, responsive single-page personal portfolio application built with React
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/portfolio-website.git
+git clone https://github.com/Vicki0111/portfolio-website.git
 cd portfolio-website
 ```
 
