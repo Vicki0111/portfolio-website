@@ -1,15 +1,16 @@
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import './App.css'
 
 export default function App() {
-  const name = 'Your Name'
-  const tagline = 'Software Developer'
-  const email = 'you@example.com'
+  const name = 'Vignesh M'
+  const tagline = 'College Student'
+  const email = 'vicvignesh0111@gmail.com'
+  const phone = '+91 6379278253'
+  const phoneTel = '+916379278253'
 
   const socials = [
-    { href: 'https://github.com/your-username', label: 'GitHub', icon: <FaGithub /> },
-    { href: 'https://www.linkedin.com/in/your-username', label: 'LinkedIn', icon: <FaLinkedin /> },
-    { href: 'https://twitter.com/your-username', label: 'Twitter', icon: <FaTwitter /> },
+    { href: 'https://github.com/Vicki0111', label: 'GitHub', icon: <FaGithub /> },
+    { href: 'https://www.linkedin.com/in/vignesh-m-a65a75381/', label: 'LinkedIn', icon: <FaLinkedin /> },
   ]
 
   return (
@@ -50,10 +51,13 @@ export default function App() {
 
         <section id="contact" className="section">
           <h2>Contact</h2>
-          <p>
-            The fastest way to reach me is by email. I’m open to collaboration and opportunities.
-          </p>
-          <a className="btn primary" href={`mailto:${email}`}>Email me</a>
+          <p>Reach me via email or phone.</p>
+          <p>Email: <a href={`mailto:${email}`}>{email}</a></p>
+          <p>Phone: <a href={`tel:${phoneTel}`}>{phone}</a></p>
+          <div className="cta">
+            <a className="btn primary" href={`mailto:${email}`}>Email me</a>
+            <a className="btn" href={`tel:${phoneTel}`}>Call me</a>
+          </div>
         </section>
       </main>
 
